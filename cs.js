@@ -86,6 +86,7 @@ const colorSwitch = function () {
   popHeaderText.style.color = `red`;
   cardText.style.color = `red`;
   cardPhoto.style.border = `red 3px solid`;
+  body.style.cursor = `url(https://psv4.userapi.com/c237331/u43582557/docs/d42/ea18af526db8/chek_3.png?extra=NtiA9WD1IA7DCKYlZEc0P4wRqxNxpWMf_5b9SVzu9ifhJp24zGCa_ptn04R7TIP8S8ChzGkmSp4PJVxJMlRYCQvOwcM7eegh2bc3EKb0LRJqQ9KYDSAlaERTso9YjVF7tQ0fgsKhJYSpe4TIe_54_Q), auto`;
   destinyChanger.style.animation = `movement 1s infinite alternate`;
   destinyChanger.addEventListener(`click`, showShadow);
   destinyChanger.addEventListener(`click`, destinyRoller);
@@ -129,6 +130,7 @@ const backToReality = function () {
     author.style.color = `rgb(172, 61, 10)`;
     cardText.style.color = `rgb(151, 143, 143)`;
     cardPhoto.style.border = `none`;
+    body.style.cursor = `url(https://sun9-28.userapi.com/c240331/u43582557/docs/d38/135691cae632/chek2.png?extra=6WFkjCV9S_XAIHHR0N878LsDfMGwuemuumRQRAXOnLk1pZm_ml0covEKVvoS0mUwMnUU0lnJhhVyaw7MMVxyo1gEMouER2mXMU_4TNkO4WtbhJdP019_wiHHJyxw7eoO0oNeapw-1Vou3CtTHI0r_g), auto`;
     destinyChanger.style.animationPlayState = `paused`;
     destinyChanger.removeEventListener(`click`, showShadow);
     destinyChanger.removeEventListener(`click`, destinyRoller);

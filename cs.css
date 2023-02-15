@@ -16,6 +16,7 @@
     transform: translateY(-10px);
   }
 }
+
 a,
 a:visited {
   text-decoration: none;
@@ -27,6 +28,9 @@ a:hover {
 .body {
   margin: 0;
   color: rgb(172, 61, 10);
+  cursor: url(https://sun9-28.userapi.com/c240331/u43582557/docs/d38/135691cae632/chek2.png?extra=6WFkjCV9S_XAIHHR0N878LsDfMGwuemuumRQRAXOnLk1pZm_ml0covEKVvoS0mUwMnUU0lnJhhVyaw7MMVxyo1gEMouER2mXMU_4TNkO4WtbhJdP019_wiHHJyxw7eoO0oNeapw-1Vou3CtTHI0r_g)
+      24 24,
+    auto;
 }
 
 h1 {
@@ -155,7 +159,7 @@ ul {
   transition: 2s;
 }
 .pop_header_text:hover {
-  cursor: default;
+  cursor: none;
   transform: rotate(180deg);
 }
 .footer {
@@ -246,4 +250,7 @@ ul {
   top: 130px;
   left: 1542px;
   transform: rotate(45deg);
+}
+.secret_button:hover {
+  cursor: none;
 }
