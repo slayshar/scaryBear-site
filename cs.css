@@ -56,8 +56,7 @@ ul {
 .shadow {
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
   position: fixed;
   z-index: 1;
@@ -127,8 +126,9 @@ ul {
   width: 80%;
   animation: color-change 3s infinite alternate;
 }
+
 .pop_inside_link_hellmode::selection {
-  background-color: red;
+  background-color: darkred;
 }
 .pop_inside_link_normalmode::selection {
   background-color: black;
@@ -190,25 +190,22 @@ ul {
   color: rgb(172, 61, 10);
 }
 .secret_card {
-  align-items: center;
   background-color: rgba(17, 11, 11);
-  width: 1250px;
+  max-width: 1250px;
   height: 600px;
-  top: 170px;
-  left: 300px;
   display: none;
-  position: fixed;
   z-index: 2;
-  grid-template-columns: 50% 50%;
+  margin: auto;
+  position: relative;
 }
 .card_photo {
   width: 350px;
   height: 350px;
-  margin: 100px auto auto 170px;
+  margin: auto 2.5em auto 5em;
   opacity: normal;
 }
 .card_text {
-  margin: 130px 170px auto auto;
+  margin: auto 5em auto 2.5em;
   text-align: end;
   color: rgb(151, 143, 143);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -222,16 +219,16 @@ ul {
 }
 .secret_card_destiny {
   align-items: center;
+  outline: red solid 3px;
+  outline-offset: -3px;
+
   background-color: rgba(17, 11, 11);
   width: 1250px;
   height: 600px;
-  top: 170px;
-  left: 300px;
   display: none;
-  position: fixed;
   z-index: 2;
-  outline: red solid 3px;
-  outline-offset: -3px;
+  margin: auto;
+  position: relative;
 }
 .secret_card_destiny_text {
   color: red;
@@ -246,15 +243,14 @@ ul {
   margin-bottom: 0;
 }
 .secret_button {
-  display: none;
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: rgba(28, 28, 28, 0);
   border: none;
   font-size: 50px;
   z-index: 4;
-  position: fixed;
-  top: 130px;
-  left: 1542px;
+  position: absolute;
+  top: 2px;
+  right: 10px;
   transform: rotate(45deg);
 }
 .secret_button:hover {

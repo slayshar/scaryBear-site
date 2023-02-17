@@ -34,7 +34,7 @@ const year = document.querySelector(`.footer_ending_year`);
 const author = document.querySelector(`.footer_ending_author`);
 const shadow = document.querySelector(`.shadow`);
 const secretCard = document.querySelector(`.secret_card`);
-const secretBtn = document.querySelector(`.secret_button`);
+const secretBtn = secretCard.querySelector(`.secret_button`);
 const cardText = document.querySelector(`.card_text`);
 const cardPhoto = document.querySelector(`.card_photo`);
 const secretCardDestiny = document.querySelector(`.secret_card_destiny`);
@@ -80,6 +80,8 @@ const colorSwitch = function () {
   pop.style.backgroundColor = `black`;
   pop.style.color = `red`;
   secretBtn.style.color = `red`;
+  secretCard.style.outline = `red solid 3px`;
+  secretCard.style.outlineOffset = `-3px`;
   popImg.style.borderColor = `red`;
   author.style.color = `red`;
   year.style.color = `red`;
@@ -109,11 +111,11 @@ const removeTheWhiteBear = function () {
   popImg.removeEventListener(`mouseleave`, bearPartyIsCancelled);
 };
 const showShadow = function () {
-  shadow.style.display = `block`;
+  shadow.style.display = `flex`;
   secretBtn.style.display = `block`;
 };
 const showCard = function () {
-  secretCard.style.display = `grid`;
+  secretCard.style.display = `flex`;
 };
 
 const backToReality = function () {
@@ -182,4 +184,5 @@ author.addEventListener(`click`, showShadow);
 author.addEventListener(`click`, showCard);
 
 shadow.addEventListener(`click`, backFromShadow);
+// в общем здесь нужно как-то поправить уход из тени, так как карточка находится внутри shadow блока
 secretBtn.addEventListener(`click`, backFromShadow);
