@@ -94,6 +94,14 @@ ul {
   cursor: none;
   color: black;
 }
+.header_text_speak {
+  transition: 1s;
+}
+.header_text_speak:hover,
+.header_text_speak.hover {
+  cursor: none;
+  color: black;
+}
 .pop {
   width: 100%;
   background-image: linear-gradient(
@@ -271,5 +279,12 @@ hr::after {
   min-width: 200px;
   position: absolute;
   top: 200px;
+  margin: auto;
+}
+
+.formContainer {
+  width: 500px;
+  height: 300px;
+  display: none;
   margin: auto;
 }

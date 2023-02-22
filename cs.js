@@ -1,6 +1,6 @@
 const whiteImg = `https://cdn1.ozone.ru/s3/multimedia-o/c1000/6040136676.jpg`;
-const blackImg = `https://psv4.userapi.com/c237131/u43582557/docs/d43/e818886b5a1e/6040136676.jpg?extra=LDk4T0tfnFnpiBYINO0jLfkrXMRUsRMCgL29J7b7t-UgF-1iE7DTWceVxYV_IMZ4ZKLvNzJLbEUDZ-NIftV-AM6dq7oMXO9d3KQVClGNUpgDlyJBAEBAjfdTBasc9cO2rZDbX1B9hh6_4NXr8OxGx6w`;
-const cursedImg = `https://psv4.userapi.com/c240331/u43582557/docs/d7/1ec1b6a370ba/ffff.jpg?extra=_Nx7dO-H2T8YuwVlU42A7zS4ygbwpPuvQmXVcgz0PNZUkyuiuT3fbgSN--G5JO6Jpa7mtB_xcfr9A2x6pbbSaRqZ-SZihpxOZGb9DWAQquiK9Y5t4nROrH22d1XKfMzRiLPFnVX1_hPmiD7uxWm2Lgc`;
+const blackImg = `https://i.ibb.co/Kxmb0sS/6040136676.jpg`;
+const cursedImg = `https://i.ibb.co/qC1mDJ8/ffff.jpg`;
 const destiny = [
   `тебе сегодня повезет`,
   `ожидает неудача`,
@@ -26,6 +26,7 @@ const popInsideTextInvisible = document.querySelector(
 const colorSwitcher = document.querySelector(`.header_text_color_switcher`);
 const colorCleaner = document.querySelector(`.header_text_color_cleaner`);
 const destinyChanger = document.querySelector(`.header_text_destiny`);
+const speakWithGod = document.querySelector(`.header_text_speak`);
 const body = document.querySelector(`.body`);
 const header = document.querySelector(`.header`);
 const footer = document.querySelector(`.footer`);
@@ -41,6 +42,7 @@ const secretCardDestiny = document.querySelector(`.secret_card_destiny`);
 const secretCardDestinyText = document.querySelector(
   `.secret_card_destiny_text`
 );
+const speakWithGodForm = document.querySelector(`.formContainer`);
 const sizeMatter = function () {
   popBtn.classList.toggle(`pop_button_clicked`);
 };
@@ -95,6 +97,9 @@ const colorSwitch = function () {
   destinyChanger.addEventListener(`click`, showShadow);
   destinyChanger.addEventListener(`click`, destinyRoller);
   destinyChanger.addEventListener(`click`, showDestiny);
+  speakWithGod.style.animation = `movement 1.2s infinite alternate`;
+  speakWithGod.addEventListener(`click`, showShadow);
+  speakWithGod.addEventListener(`click`, showSpeakWithGod);
 };
 const bearSwitcher = function () {
   if (popImg.src == blackImg && header.style.backgroundColor == `black`) {
@@ -161,7 +166,11 @@ const showDestiny = function () {
   destinyRoller;
 };
 
-const backFromShadow = function () {
+const showSpeakWithGod = function () {
+  speakWithGodForm.style.display = `flex`;
+};
+
+const backFromShadow = function (event) {
   shadow.style.display = `none`;
   secretCard.style.display = `none`;
   secretCardDestiny.style.display = `none`;
@@ -183,6 +192,12 @@ colorCleaner.addEventListener(`click`, blackToWhite);
 author.addEventListener(`click`, showShadow);
 author.addEventListener(`click`, showCard);
 
-shadow.addEventListener(`click`, backFromShadow);
+shadow.addEventListener(`click`, function (event) {
+  if (this != event.target) {
+    return;
+  } else {
+    backFromShadow();
+  }
+});
 // в общем здесь нужно как-то поправить уход из тени, так как карточка находится внутри shadow блока
 secretBtn.addEventListener(`click`, backFromShadow);
