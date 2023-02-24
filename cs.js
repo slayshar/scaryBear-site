@@ -47,7 +47,7 @@ const colorSwitch = function () {
   cardPhoto.style.border = `red 3px solid`;
   popInsideLink.classList.add(`pop_inside_link_hellmode`);
   popInsideLink.classList.remove(`pop_inside_link_normalmode`);
-  body.style.cursor = `url(https://psv4.userapi.com/c237331/u43582557/docs/d42/ea18af526db8/chek_3.png?extra=NtiA9WD1IA7DCKYlZEc0P4wRqxNxpWMf_5b9SVzu9ifhJp24zGCa_ptn04R7TIP8S8ChzGkmSp4PJVxJMlRYCQvOwcM7eegh2bc3EKb0LRJqQ9KYDSAlaERTso9YjVF7tQ0fgsKhJYSpe4TIe_54_Q), auto`;
+  body.style.cursor = `url(https://i.ibb.co/jDRhvCd/3.png), auto`;
   destinyChanger.style.animation = `movement 1s infinite alternate`;
   destinyChanger.addEventListener(`click`, showShadow);
   destinyChanger.addEventListener(`click`, destinyRoller);
@@ -96,7 +96,7 @@ const backToReality = function () {
     cardPhoto.style.border = `none`;
     popInsideLink.classList.remove(`pop_inside_link_hellmode`);
     popInsideLink.classList.add(`pop_inside_link_normalmode`);
-    body.style.cursor = `url(https://sun9-28.userapi.com/c240331/u43582557/docs/d38/135691cae632/chek2.png?extra=6WFkjCV9S_XAIHHR0N878LsDfMGwuemuumRQRAXOnLk1pZm_ml0covEKVvoS0mUwMnUU0lnJhhVyaw7MMVxyo1gEMouER2mXMU_4TNkO4WtbhJdP019_wiHHJyxw7eoO0oNeapw-1Vou3CtTHI0r_g), auto`;
+    body.style.cursor = `url(https://i.ibb.co/J5RZfkB/2.png), auto`;
     destinyChanger.style.animationPlayState = `paused`;
     destinyChanger.removeEventListener(`click`, showShadow);
     destinyChanger.removeEventListener(`click`, destinyRoller);
