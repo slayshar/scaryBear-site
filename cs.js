@@ -44,8 +44,6 @@ const colorSwitch = function () {
   popHeaderText.style.color = `red`;
   cardText.style.color = `red`;
   cardPhoto.style.border = `red 3px solid`;
-  popInsideLink.classList.add(`pop_inside_link_hellmode`);
-  popInsideLink.classList.remove(`pop_inside_link_normalmode`);
   body.style.cursor = `url(https://i.ibb.co/jDRhvCd/3.png), auto`;
   destinyChanger.style.animation = `movement 1s infinite alternate`;
   destinyChanger.addEventListener(`click`, showShadow);
@@ -56,6 +54,10 @@ const colorSwitch = function () {
   speakWithGod.addEventListener(`click`, showSpeakWithGod);
   secretBtnList.forEach(function (el) {
     el.style.color = `red`;
+  });
+  blackSelectionText.forEach(function (el) {
+    el.classList.remove(`black_selection`);
+    el.classList.add(`red_selection`);
   });
 };
 const bearSwitcher = function () {
@@ -96,8 +98,6 @@ const backToReality = function () {
     author.style.color = `rgb(172, 61, 10)`;
     cardText.style.color = `rgb(151, 143, 143)`;
     cardPhoto.style.border = `none`;
-    popInsideLink.classList.remove(`pop_inside_link_hellmode`);
-    popInsideLink.classList.add(`pop_inside_link_normalmode`);
     body.style.cursor = `url(https://i.ibb.co/J5RZfkB/2.png), auto`;
     destinyChanger.style.animationPlayState = `paused`;
     destinyChanger.removeEventListener(`click`, showShadow);
@@ -105,6 +105,10 @@ const backToReality = function () {
     destinyChanger.removeEventListener(`click`, showDestiny);
     secretBtnList.forEach(function (el) {
       el.style.color = `white`;
+    });
+    blackSelectionText.forEach(function (el) {
+      el.classList.remove(`red_selection`);
+      el.classList.add(`black_selection`);
     });
   }
 };
@@ -160,7 +164,7 @@ author.addEventListener(`click`, showCard);
 
 shadow.addEventListener(`click`, function (event) {
   if (this != event.target) {
-    console.log(event.target);
+    return;
   } else {
     backFromShadow();
   }

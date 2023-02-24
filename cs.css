@@ -133,10 +133,10 @@ ul {
   animation: color-change 3s infinite alternate;
 }
 
-.pop_inside_link_hellmode::selection {
+.red_selection::selection {
   background-color: darkred;
 }
-.pop_inside_link_normalmode::selection {
+.black_selection::selection {
   background-color: black;
 }
 .pop_inside_text {

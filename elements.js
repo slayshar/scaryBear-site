@@ -35,7 +35,8 @@ const year = document.querySelector(`.footer_ending_year`);
 const author = document.querySelector(`.footer_ending_author`);
 const shadow = document.querySelector(`.shadow`);
 const secretCard = document.querySelector(`.secret_card`);
-
+const blackSelectionText = document.querySelectorAll(`.black_selection`);
+const redSelectionText = document.querySelectorAll(`.red_selection`);
 const secretBtnList = document.querySelectorAll(`.secret_button`);
 const cardText = document.querySelector(`.card_text`);
 const cardPhoto = document.querySelector(`.card_photo`);
