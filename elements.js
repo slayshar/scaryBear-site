@@ -35,7 +35,8 @@ const year = document.querySelector(`.footer_ending_year`);
 const author = document.querySelector(`.footer_ending_author`);
 const shadow = document.querySelector(`.shadow`);
 const secretCard = document.querySelector(`.secret_card`);
-const secretBtn = secretCard.querySelector(`.secret_button`);
+
+const secretBtnList = document.querySelectorAll(`.secret_button`);
 const cardText = document.querySelector(`.card_text`);
 const cardPhoto = document.querySelector(`.card_photo`);
 const secretCardDestiny = document.querySelector(`.secret_card_destiny`);
@@ -43,3 +44,4 @@ const secretCardDestinyText = document.querySelector(
   `.secret_card_destiny_text`
 );
 const speakWithGodForm = document.querySelector(`.formContainer`);
+const speakWithGodHeader = document.querySelector(`.formContainer_text`);

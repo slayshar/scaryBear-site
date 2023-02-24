@@ -36,7 +36,6 @@ const colorSwitch = function () {
   pop.style.backgroundImage = `none`;
   pop.style.backgroundColor = `black`;
   pop.style.color = `red`;
-  secretBtn.style.color = `red`;
   secretCard.style.outline = `red solid 3px`;
   secretCard.style.outlineOffset = `-3px`;
   popImg.style.borderColor = `red`;
@@ -55,6 +54,9 @@ const colorSwitch = function () {
   speakWithGod.style.animation = `movement 1.2s infinite alternate`;
   speakWithGod.addEventListener(`click`, showShadow);
   speakWithGod.addEventListener(`click`, showSpeakWithGod);
+  secretBtnList.forEach(function (el) {
+    el.style.color = `red`;
+  });
 };
 const bearSwitcher = function () {
   if (popImg.src == blackImg && header.style.backgroundColor == `black`) {
@@ -72,7 +74,6 @@ const removeTheWhiteBear = function () {
 };
 const showShadow = function () {
   shadow.style.display = `flex`;
-  secretBtn.style.display = `block`;
 };
 const showCard = function () {
   secretCard.style.display = `flex`;
@@ -86,7 +87,8 @@ const backToReality = function () {
     footer.style.backgroundColor = `#ff9a9e`;
     pop.style.backgroundImage = `linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)`;
     pop.style.backgroundColor = ` `;
-    secretBtn.style.color = `white`;
+    secretCard.style.outline = `none`;
+    secretCard.style.outlineOffset = `-3px`;
     popHeaderText.style.color = `rgb(172, 61, 10)`;
     pop.style.color = `rgb(172, 61, 10)`;
     popImg.style.borderColor = `rgb(172, 61, 10)`;
@@ -101,6 +103,9 @@ const backToReality = function () {
     destinyChanger.removeEventListener(`click`, showShadow);
     destinyChanger.removeEventListener(`click`, destinyRoller);
     destinyChanger.removeEventListener(`click`, showDestiny);
+    secretBtnList.forEach(function (el) {
+      el.style.color = `white`;
+    });
   }
 };
 
@@ -123,14 +128,20 @@ const showDestiny = function () {
 
 const showSpeakWithGod = function () {
   speakWithGodForm.style.display = `flex`;
+  speakWithGodHeader.style.display = `inline`;
 };
 
 const backFromShadow = function (event) {
   shadow.style.display = `none`;
   secretCard.style.display = `none`;
   secretCardDestiny.style.display = `none`;
-  secretBtn.style.display = `none`;
+  speakWithGodHeader.style.display = `none`;
+  speakWithGodForm.style.display = `none`;
 };
+
+secretBtnList.forEach(function (el) {
+  el.addEventListener(`click`, backFromShadow);
+});
 
 popImg.addEventListener(`mouseenter`, bearPartyGoneWrong);
 popImg.addEventListener(`mouseleave`, bearPartyIsCancelled);
@@ -149,9 +160,8 @@ author.addEventListener(`click`, showCard);
 
 shadow.addEventListener(`click`, function (event) {
   if (this != event.target) {
-    return;
+    console.log(event.target);
   } else {
     backFromShadow();
   }
 });
-secretBtn.addEventListener(`click`, backFromShadow);

@@ -281,8 +281,15 @@ hr::after {
 }
 
 .formContainer {
-  width: 500px;
+  min-width: 500px;
   height: 300px;
   display: none;
   margin: auto;
+}
+.formContainer_text {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
+  display: none;
 }
