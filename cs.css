@@ -1,3 +1,38 @@
+@font-face {
+  src: url('https://pictures.s3.yandex.net/fonts/Ibmplexserif.woff2')
+    format('woff2');
+  font-family: IBM Plex Serif;
+  font-weight: normal;
+}
+@font-face {
+  src: url('https://pictures.s3.yandex.net/fonts/ubuntu.woff2') format('woff2');
+  font-family: Ubuntu;
+  font-weight: normal;
+}
+@font-face {
+  src: url('https://pictures.s3.yandex.net/fonts/istokregular.woff2')
+    format('woff2');
+  font-family: Istok Web;
+  font-weight: normal;
+}
+@font-face {
+  src: url('https://pictures.s3.yandex.net/fonts/Ibmplexserifsemibold.woff2')
+    format('woff2');
+  font-family: IBM Plex Serif;
+  font-weight: bold;
+}
+@font-face {
+  src: url('https://pictures.s3.yandex.net/fonts/ubuntubold.woff2')
+    format('woff2');
+  font-family: Ubuntu;
+  font-weight: bold;
+}
+@font-face {
+  src: url('https://pictures.s3.yandex.net/fonts/istokbold.woff2')
+    format('woff2');
+  font-family: Istok Web;
+  font-weight: bold;
+}
 @keyframes color-change {
   0% {
     color: rgb(172, 61, 10);
@@ -13,7 +48,16 @@
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes god-movement {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(0, -5px);
   }
 }
 
@@ -130,6 +174,7 @@ ul {
   grid-row: 1/3;
   margin: 0 auto;
   width: 80%;
+  font-family: 'Ubuntu';
   animation: color-change 3s infinite alternate;
 }
 
@@ -141,6 +186,7 @@ ul {
 }
 .pop_inside_text {
   margin: 0 auto;
+  font-family: 'Ubuntu';
 }
 .pop_inside_text:hover {
   cursor: none;
@@ -216,6 +262,7 @@ ul {
   color: rgb(151, 143, 143);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.17em;
+  font-family: 'Ubuntu';
 }
 .super_shadow {
   background-color: black;
@@ -240,13 +287,14 @@ ul {
   color: red;
   animation: movement 1s infinite alternate;
   text-align: start;
+  font-family: 'Ubuntu';
 }
 .secret_card_destiny_header {
   color: red;
   text-align: end;
   font-weight: bold;
   font-size: 3em;
-  margin-bottom: 0;
+  font-family: 'Ubuntu';
 }
 .secret_button {
   color: rgb(255, 255, 255);
@@ -275,21 +323,52 @@ hr::after {
 }
 .askMe {
   min-width: 200px;
-  position: absolute;
-  top: 200px;
   margin: auto;
+  border: none;
 }
 
 .formContainer {
-  min-width: 500px;
-  height: 300px;
+  outline: red solid 3px;
+  outline-offset: -3px;
+  background-color: rgba(17, 11, 11);
+  width: 1250px;
+  height: 600px;
   display: none;
+  z-index: 2;
   margin: auto;
+  position: relative;
+  flex-direction: column;
+  font-family: 'Ubuntu';
 }
+
 .formContainer_text {
   color: red;
   text-align: center;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 2.7em;
   display: none;
+  margin: auto auto 0;
+  flex-wrap: wrap-reverse;
+}
+.formContainer_subtext {
+  color: red;
+  text-align: center;
+  font-size: 1.5em;
+  display: none;
+  margin: auto auto 0;
+}
+.speakWithGodForm {
+  margin: auto;
+}
+.speakWithGodInput {
+  background-color: black;
+  color: red;
+  width: 50vw;
+  height: 20vh;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: 'Ubuntu';
+}
+.speakWithGodInput:focus {
+  outline: red 3px ridge;
 }

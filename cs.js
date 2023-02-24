@@ -132,7 +132,8 @@ const showDestiny = function () {
 
 const showSpeakWithGod = function () {
   speakWithGodForm.style.display = `flex`;
-  speakWithGodHeader.style.display = `inline`;
+  speakWithGodHeader.style.display = `flex`;
+  speakWithGodSubHeader.style.display = `flex`;
 };
 
 const backFromShadow = function (event) {

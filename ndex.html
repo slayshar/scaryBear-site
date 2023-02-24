@@ -17,7 +17,7 @@
           <h2 class="secret_card_destiny_header black_selection">
             Твое предсказание на сегодня:
           </h2>
-          <h2 class="secret_card_destiny_text"></h2>
+          <h2 class="secret_card_destiny_text black_selection"></h2>
         </div>
 
         <div class="secret_card">
@@ -42,12 +42,21 @@
         </div>
 
         <div class="formContainer">
+          <button class="secret_button">+</button>
           <h2 class="formContainer_text black_selection">
-            Ты наконец-то получил возможность поговорить с Богом
+            Ты наконец-то можешь поговорить c Богом
           </h2>
+          <h2 class="formContainer_subtext black_selection">
+            Задай свой вопрос здесь:
+          </h2>
+
           <form class="speakWithGodForm">
             <fieldset class="askMe">
-              <input type="text" class="speakWithGodInput" />
+              <textarea
+                placeholder="Уважаемый Бог, ответь на мой вопрос:"
+                minlength="2"
+                class="speakWithGodInput"
+              ></textarea>
             </fieldset>
           </form>
         </div>
