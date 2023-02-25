@@ -325,6 +325,8 @@ hr::after {
   min-width: 200px;
   margin: auto;
   border: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .formContainer {
@@ -371,4 +373,17 @@ hr::after {
 }
 .speakWithGodInput:focus {
   outline: red 3px ridge;
+}
+.sendToGod {
+  background-color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  margin: 20px auto;
+  font-size: 1.6em;
+  border: solid 1px red;
+  transition: 2s;
+}
+.sendToGod:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 0, 0);
+  cursor: none;
 }
