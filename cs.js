@@ -99,6 +99,9 @@ const backToReality = function () {
     cardText.style.color = `rgb(151, 143, 143)`;
     cardPhoto.style.border = `none`;
     body.style.cursor = `url(https://i.ibb.co/J5RZfkB/2.png), auto`;
+    speakWithGod.style.animationPlayState = `paused`;
+    speakWithGod.removeEventListener(`click`, showShadow);
+    speakWithGod.removeEventListener(`click`, showSpeakWithGod);
     destinyChanger.style.animationPlayState = `paused`;
     destinyChanger.removeEventListener(`click`, showShadow);
     destinyChanger.removeEventListener(`click`, destinyRoller);
@@ -144,6 +147,11 @@ const backFromShadow = function (event) {
   speakWithGodForm.style.display = `none`;
 };
 
+const sendMessageToGod = (el) => {
+  const question = questionToGod.value;
+  console.log(question);
+};
+
 secretBtnList.forEach(function (el) {
   el.addEventListener(`click`, backFromShadow);
 });
@@ -169,4 +177,9 @@ shadow.addEventListener(`click`, function (event) {
   } else {
     backFromShadow();
   }
+});
+
+sendToGodBtn.addEventListener(`click`, function (event) {
+  const question = questionToGod.value;
+  console.log(question);
 });

@@ -47,3 +47,4 @@ const secretCardDestinyText = document.querySelector(
 const speakWithGodForm = document.querySelector(`.formContainer`);
 const speakWithGodHeader = document.querySelector(`.formContainer_text`);
 const speakWithGodSubHeader = document.querySelector(`.formContainer_subtext`);
+const sendToGodBtn = document.querySelector(`.sendToGod`);
