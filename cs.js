@@ -147,11 +147,6 @@ const backFromShadow = function (event) {
   speakWithGodForm.style.display = `none`;
 };
 
-const sendMessageToGod = (el) => {
-  const question = questionToGod.value;
-  console.log(question);
-};
-
 secretBtnList.forEach(function (el) {
   el.addEventListener(`click`, backFromShadow);
 });
@@ -180,6 +175,7 @@ shadow.addEventListener(`click`, function (event) {
 });
 
 sendToGodBtn.addEventListener(`click`, function (event) {
-  const question = questionToGod.value;
-  console.log(question);
+  event.preventDefault();
+  const magicquestion = questionToGod.value;
+  console.log(magicquestion);
 });
