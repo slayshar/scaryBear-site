@@ -14,7 +14,6 @@ const destiny = [
   `ты послужишь Родине`,
 ];
 const pop = document.querySelector(`.pop`);
-const popBtn = document.querySelector('.pop_button');
 const popImg = document.querySelector(`.pop_img`);
 const popText = document.querySelector(`.pop_inside_hello`);
 const popHeaderText = document.querySelector(`.pop_header_text`);

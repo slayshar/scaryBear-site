@@ -1,20 +1,20 @@
-const sizeMatter = function () {
+const sizeMatter = () => {
   popBtn.classList.toggle(`pop_button_clicked`);
 };
-const bearParty = function () {
+const bearParty = () => {
   popImg.src = cursedImg;
 };
-const bearPartyGoneWrong = function () {
+const bearPartyGoneWrong = () => {
   if (popImg.src == whiteImg) {
     popImg.src = blackImg;
   }
 };
-const bearPartyIsCancelled = function () {
+const bearPartyIsCancelled = () => {
   if (popImg.src == blackImg) {
     popImg.src = whiteImg;
   }
 };
-const textSwitcher = function () {
+const textSwitcher = () => {
   if (popInsideText.textContent.includes(`?`)) {
     smoothly(
       popInsideText,
@@ -27,7 +27,7 @@ const textSwitcher = function () {
     popInsideText.style.fontSize = `30px`;
   }
 };
-const colorSwitch = function () {
+const colorSwitch = () => {
   //!режим ада
   popImg.src = blackImg;
   body.style.color = `black`;
@@ -52,15 +52,15 @@ const colorSwitch = function () {
   speakWithGod.style.animation = `movement 1.2s infinite alternate`;
   speakWithGod.addEventListener(`click`, showShadow);
   speakWithGod.addEventListener(`click`, showSpeakWithGod);
-  secretBtnList.forEach(function (el) {
+  secretBtnList.forEach((el) => {
     el.style.color = `red`;
   });
-  blackSelectionText.forEach(function (el) {
+  blackSelectionText.forEach((el) => {
     el.classList.remove(`black_selection`);
     el.classList.add(`red_selection`);
   });
 };
-const bearSwitcher = function () {
+const bearSwitcher = () => {
   if (popImg.src == blackImg && header.style.backgroundColor == `black`) {
     popImg.src = cursedImg;
   } else if (
@@ -71,17 +71,17 @@ const bearSwitcher = function () {
   }
 };
 
-const removeTheWhiteBear = function () {
+const removeTheWhiteBear = () => {
   popImg.removeEventListener(`mouseleave`, bearPartyIsCancelled);
 };
-const showShadow = function () {
+const showShadow = () => {
   shadow.style.display = `flex`;
 };
-const showCard = function () {
+const showCard = () => {
   secretCard.style.display = `flex`;
 };
 
-const backToReality = function () {
+const backToReality = () => {
   if (header.style.backgroundColor == `black`) {
     popImg.src = whiteImg;
     body.style.color = `rgb(172, 61, 10)`;
@@ -106,40 +106,40 @@ const backToReality = function () {
     destinyChanger.removeEventListener(`click`, showShadow);
     destinyChanger.removeEventListener(`click`, destinyRoller);
     destinyChanger.removeEventListener(`click`, showDestiny);
-    secretBtnList.forEach(function (el) {
+    secretBtnList.forEach((el) => {
       el.style.color = `white`;
     });
-    blackSelectionText.forEach(function (el) {
+    blackSelectionText.forEach((el) => {
       el.classList.remove(`red_selection`);
       el.classList.add(`black_selection`);
     });
   }
 };
 
-const blackToWhite = function () {
+const blackToWhite = () => {
   popImg.addEventListener(`mouseleave`, bearPartyIsCancelled);
 };
 
-const destinyRoller = function () {
+const destinyRoller = () => {
   const rockNumber = Math.floor(Math.random() * destiny.length);
   const lastRockNumber = destiny[rockNumber];
   secretCardDestinyText.textContent = lastRockNumber;
 };
 
-const showDestiny = function () {
+const showDestiny = () => {
   secretCardDestiny.style.display = `grid`;
   secretCardDestiny.style.justifyItems = `center`;
   secretCardDestiny.style.alignContent = `center`;
   destinyRoller;
 };
 
-const showSpeakWithGod = function () {
+const showSpeakWithGod = () => {
   speakWithGodForm.style.display = `flex`;
   speakWithGodHeader.style.display = `flex`;
   speakWithGodSubHeader.style.display = `flex`;
 };
 
-const backFromShadow = function (event) {
+const backFromShadow = (event) => {
   shadow.style.display = `none`;
   secretCard.style.display = `none`;
   secretCardDestiny.style.display = `none`;
@@ -147,7 +147,7 @@ const backFromShadow = function (event) {
   speakWithGodForm.style.display = `none`;
 };
 
-secretBtnList.forEach(function (el) {
+secretBtnList.forEach((el) => {
   el.addEventListener(`click`, backFromShadow);
 });
 
@@ -174,8 +174,16 @@ shadow.addEventListener(`click`, function (event) {
   }
 });
 
-sendToGodBtn.addEventListener(`click`, function (event) {
+const createAnswer = (quest) => {
+  const asktwo = confirm(
+    `"${quest}" - ты можешь задать Богу любой вопрос на свете, и ты выбираешь именно ЭТОТ вопрос?`
+  );
+  if (asktwo) {
+    console.log(`Кринж...`);
+  }
+};
+sendToGodBtn.addEventListener(`click`, (event) => {
   event.preventDefault();
   const magicquestion = questionToGod.value;
-  console.log(magicquestion);
+  createAnswer(magicquestion);
 });
